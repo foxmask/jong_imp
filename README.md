@@ -2,6 +2,10 @@
 
 Import of notes into joplin from your cloud service
 
+## prerequisite
+
+joplin terminal installed
+
 ## installing
 
 * create a virtualenv and activate it
