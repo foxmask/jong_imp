@@ -4,7 +4,8 @@ Import of notes into joplin from your cloud service
 
 ## prerequisite
 
-joplin terminal installed
+* Python 3.4 or +
+* [joplin terminal](https://joplin.cozic.net/terminal/) installed
 
 ## installing
 
