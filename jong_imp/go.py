@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 import shlex
 import subprocess
+import itertools
 
 """
     Joplin Importer:
@@ -78,7 +79,11 @@ def go():
     """
 
     ji = JongImp()
-    files = Path(config['JOPLIN_CONFIG']['JOPLIN_IMPORT_FOLDER']).glob('*.md')
+    md_files = Path(config['JOPLIN_CONFIG']['JOPLIN_IMPORT_FOLDER']).glob('*.md')
+    jex_files = Path(config['JOPLIN_CONFIG']['JOPLIN_IMPORT_FOLDER']).glob('*.jex')
+    # concatenate the 2 generators
+    files = itertools.chain(md_files, jex_files)
+    # read the files to import
     for file in files:
         ji.import_note(file)
 
