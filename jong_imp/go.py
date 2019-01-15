@@ -43,13 +43,12 @@ class JongImp:
         :param file: file to import
         :return: built command
         """
-
-        command = config['JOPLIN_CONFIG']['JOPLIN_BIN_PATH'] + ' import'
+        command = config['JOPLIN_CONFIG']['JOPLIN_BIN_PATH']
 
         if config['JOPLIN_CONFIG']['JOPLIN_PROFILE_PATH']:
-            command += ' --profile {}'.format(config['JOPLIN_CONFIG']['JOPLIN_PROFILE_PATH'])
+            command += ' --profile {} '.format(config['JOPLIN_CONFIG']['JOPLIN_PROFILE_PATH'])
 
-        command += ' {} {}'.format(file, config['JOPLIN_CONFIG']['JOPLIN_DEFAULT_FOLDER'])
+        command += ' import {} {}'.format(file, config['JOPLIN_CONFIG']['JOPLIN_DEFAULT_FOLDER'])
         return command
 
     def _joplin_run(self, file):
