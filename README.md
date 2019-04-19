@@ -1,11 +1,11 @@
 # jong_imp
 
-Import of notes into joplin from your cloud service
+Import of notes into joplinapp from your cloud service
 
 ## prerequisite
 
 * Python 3.4 or +
-* [joplin terminal](https://joplin.cozic.net/terminal/) installed
+* [joplin terminal](https://joplinapp.org/terminal/) installed
 
 ## installing
 
